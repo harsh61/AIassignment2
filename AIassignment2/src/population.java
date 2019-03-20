@@ -1,31 +1,35 @@
-+
 public class population {
-  individual[] indivi;
+  // stores alls the tours
+  tour[] tours;
 
-    public population(int size, boolean initial) {
-      indivi = new individual[size];
-	    for (int i = 0; i < indivi.length; i++) {
-		      individual newIndi = new individual();
-	        newIndi.path();
-	        saveIndividual(i, newIndi);
-	    }
+  // creates different types of tours
+  public population(int size, boolean initial) {
+    tours = new tour[size];
+    for (int i = 0; i < tours.length; i++) {
+	      tour newTour = new tour();
+        newTour.path();
+        savetour(i, newTour);
     }
+  }
 
-    public individual getIndi(int index) {
-      return indivi[index];
-    }
+  // gets the tour from all the tours
+  public tour getTour(int index) {
+    return tours[index];
+  }
 
-    public individual getFittest() {
-      individual fittest = indivi[0];
-      for (int i = 0; i < indivi.length; i++) {
-        if(fittest.getFitness() <= getIndi(i).getFitness()) {
-          fittest = getIndi(i);
-        }
+  // gets the best possible route
+  public tour getFittest() {
+    tour fittest = tours[0];
+    for (int i = 0; i < tours.length; i++) {
+      if(fittest.getFitness() <= getTour(i).getFitness()) {
+        fittest = getTour(i);
       }
-      return fittest;
     }
+    return fittest;
+  }
 
-    public void saveIndividual(int index, individual indiv) {
-      indivi[index] = indiv;
-    }
+  // saves the tour that we were on
+  public void savetour(int index, tour tour) {
+    tours[index] = tour;
+  }
 }
