@@ -1,4 +1,4 @@
-import java.util.*;
+package tsp;
 
 public class City {
 
@@ -28,7 +28,7 @@ public class City {
 	}
 	
 	//This is for the distance between the given city
-	public double disTo (City city){
+	public double distanceTo (City city){
 		int xDis = Math.abs(getcityX() - city.getcityX());
 		int yDis = Math.abs(getcityY() - city.getcityY());
 		double distance = Math.sqrt( (xDis*xDis) + (yDis*yDis));

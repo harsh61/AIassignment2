@@ -1,3 +1,5 @@
+extends main; 
+
 import java.util.*;
 
 public class tour {

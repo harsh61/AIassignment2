@@ -1,8 +1,9 @@
+
 public class main {
 
-    public static void main(String[] args) {
-
-        // Create and add our cities
+	public static void main(String[] args) {
+		
+		  // Create and add our cities
         City city = new City(60, 200);
         TourManager.addCity(city);
         City city2 = new City(180, 200);
@@ -60,4 +61,8 @@ public class main {
         System.out.println("Solution:");
         System.out.println(pop.getFittest());
     }
+}
+
+	}
+
 }
