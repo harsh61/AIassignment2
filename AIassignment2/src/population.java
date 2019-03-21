@@ -33,4 +33,9 @@ public class population {
   public void savetour(int index, tour tour) {
     tours[index] = tour;
   }
+
+  // Gets population size
+  public int populationSize() {
+    return tours.length;
+  }
 }

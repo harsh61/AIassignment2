@@ -1,5 +1,3 @@
-extends main; 
-
 import java.util.*;
 
 public class tour {
@@ -35,7 +33,7 @@ public class tour {
 
   // sets the position of the city
   public void setCity(int position, City city) {
-    tour.set(position, city);
+    tours.set(position, city);
     fitness = 0;
     distance = 0;
   }
@@ -66,6 +64,10 @@ public class tour {
       distance = tour;
     }
     return distance;
+  }
+
+  public int tourSize() {
+    return tours.size();
   }
 
   // checks to see if the city is in the tour
